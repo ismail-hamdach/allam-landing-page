@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -7,7 +8,9 @@ const checkIcon = (
   </svg>
 );
 
-const AboutSectionOne = () => {
+const AboutSectionOne = async ({ lang }) => {
+  const t = await getDictionary(lang)
+
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
       <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
@@ -24,8 +27,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Unlock the World of Arabic Learning with AI"
-                paragraph="[Platform Name] is a cutting-edge AI-powered learning platform designed to make mastering the Arabic language an enjoyable journey for children. Whether your child is just starting out or looking to strengthen their language skills, [Platform Name] serves as the ultimate learning companion, offering tailored lessons, engaging activities, and personalized progress tracking."
+                title={t.about.title}
+                paragraph={t.about.desc}
                 mb="44px"
               />
 
@@ -35,13 +38,13 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="AI-Powered Personalization" />
-                    <List text="Engaging Content" />
+                    <List text={t.about.features[0]} />
+                    <List text={t.about.features[1]} />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Parent Involvement" />
-                    <List text="Flexible Learning" />
+                    <List text={t.about.features[2]} />
+                    <List text={t.about.features[3]} />
                   </div>
                 </div>
               </div>

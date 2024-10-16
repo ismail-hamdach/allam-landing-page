@@ -1,0 +1,111 @@
+{
+  "header": {
+    "menu": [
+      {
+        "id": 0,
+        "title": "About",
+        "path": "/#about",
+        "newTab": false
+      },
+      {
+        "id": 1,
+        "title": "Features",
+        "path": "/#features",
+        "newTab": false
+      },
+      {
+        "id": 2,
+        "title": "How It Works",
+        "path": "/#How-It-Works",
+        "newTab": false
+      }
+    ],
+    "try_for_free": "Try For Free"
+  },
+  "hero": {
+    "textArray": [
+      "Learn Arabic with AI-powered lessons.",
+      "Personalized learning for your child.",
+      "Master the language in a fun way!"
+    ],
+    "subtitle": "Empower Your Child’s Journey to Master the Arabic Language with AI-Powered Learning",
+    "try_button": "Try For Free"
+  },
+  "about": {
+    "title": "Unlock the World of Arabic Learning with AI",
+    "desc": "[Platform Name] is a cutting-edge AI-powered learning platform designed to make mastering the Arabic language an enjoyable journey for children. Whether your child is just starting out or looking to strengthen their language skills, [Platform Name] serves as the ultimate learning companion, offering tailored lessons, engaging activities, and personalized progress tracking.",
+    "features": [
+      "AI-Powered Personalizatio",
+      "Engaging Content",
+      "Parent Involvement",
+      "Flexible Learning"
+    ]
+  },
+  "features": {
+    "title": "Main Features",
+    "desc": "Our AI-powered platform provides a customized learning journey that adapts to your child’s level, interests, and pace—making Arabic both fun and accessible.",
+    "features": [
+      {
+        "id": 0,
+        "title": "Personalized Learning Paths",
+        "paragraph": "Every child has a tailored learning experience based on their proficiency and preferences. From vocabulary to grammar, the content evolves as your child progresses."
+      },
+      {
+        "id": 1,
+        "title": "Interactive Activities",
+        "paragraph": "Engage your child with games, quizzes, and exercises that make learning exciting and effective, from the alphabet to advanced reading."
+      },
+      {
+        "id": 2,
+        "title": "AI-Driven Insights",
+        "paragraph": "Our platform tracks your child’s progress and offers recommendations to improve weak areas, ensuring steady growth."
+      },
+      {
+        "id": 3,
+        "title": "Parent Dashboard",
+        "paragraph": "Stay involved with regular updates on your child’s achievements, challenges, and areas for improvement."
+      },
+      {
+        "id": 4,
+        "title": "Flexible Learning Schedule",
+        "paragraph": "Learning happens anytime, anywhere. Whether in the morning or evening, your child can learn at their own pace."
+      },
+      {
+        "id": 5,
+        "title": "Free and Open-Source",
+        "paragraph": "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores."
+      }
+    ]
+  },
+  "tutorial": {
+    "title": "How It Works",
+    "subtitle": "Tailored Just for Your Child.",
+    "instructions": [
+      {
+        "title": "1- Sign Up & Create a Profile",
+        "desc": "Begin by creating an account and setting up your child’s personalized learning profile."
+      },
+      {
+        "title": "2- Start the Learning Journey",
+        "desc": "Based on the data you provide, our platform designs a custom learning path with engaging lessons and activities."
+      },
+      {
+        "title": "3- Track Progress",
+        "desc": "Our AI provides regular feedback, adjusts difficulty levels, and helps your child master each lesson with confidence."
+      }
+    ]
+  },
+  "start_section": {
+    "title": "Ready to Give Your Child the Gift of Arabic Fluency?",
+    "desc": "Sign up today and start your child's personalized learning journey with Allam Educational Platform.",
+    "button": "Start Free Trail"
+  },
+  "footer": {
+    "about_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis.",
+    "support_help": "Support & Help",
+    "privacy_policy": "Privacy Policy",
+    "terms_use": "Terms of Use",
+    "about": "About",
+    "rights": "© 2024 Atlas Inovators. All rights reserved."
+  }
+}

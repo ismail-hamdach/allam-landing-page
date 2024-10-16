@@ -1,7 +1,11 @@
 import Link from "next/link";
 import TypingEffect from '../TypingEffect';
+import { getDictionary } from '@/app/[lang]/dictionaries'
 
-const Hero = () => {
+const Hero = async ({lang}) => {
+
+  const t = await getDictionary(lang);
+
   return (
     <>
       <section
@@ -15,9 +19,9 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[1000px] text-center">
-                <TypingEffect />
+                <TypingEffect textArray={t.hero.textArray} />
                 <h1 className="text-2xl text-blue-800 dark:text-blue-300  font-semibold !leading-relaxed  sm:text-2lg md:text-2xl mb-24">
-                  Empower Your Child’s Journey to Master the Arabic Language with AI-Powered Learning
+                  {t.hero.subtitle}
                 </h1>
                 {/* <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                   "Personalized lessons, interactive activities, and fun challenges designed to adapt to your child’s unique learning style."
@@ -27,7 +31,7 @@ const Hero = () => {
                     href="https://nextjstemplates.com/templates/saas-starter-startup"
                     className="rounded-2xl hover:scale-110 bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    Try For Free
+                    {t.hero.try_button}
                   </Link>
                 </div>
               </div>

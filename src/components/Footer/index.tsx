@@ -1,8 +1,10 @@
-"use client";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 import Image from "next/image";
 import Link from "next/link";
 
-const Footer = () => {
+const Footer = async ({lang}) => {
+
+  const t = await getDictionary(lang)
   return (
     <>
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
@@ -27,8 +29,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                  {t.footer.about_desc}
                 </p>
                 <div className="flex items-center">
                   <a
@@ -180,7 +181,7 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Support & Help
+                  {t.footer.support_help}
                 </h2>
                 <ul>
                   <li>
@@ -188,7 +189,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Privacy Policy
+                      {t.footer.privacy_policy}
                     </Link>
                   </li>
                   {/* <li>
@@ -204,7 +205,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Terms of Use
+                      {t.footer.terms_use}
                     </Link>
                   </li>
                   <li>
@@ -212,7 +213,7 @@ const Footer = () => {
                       href="/about"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      About
+                      {t.footer.about}
                     </Link>
                   </li>
                 </ul>
@@ -223,7 +224,7 @@ const Footer = () => {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-              © 2024 Atlas Inovators. All rights reserved.
+              {t.footer.rights}
             </p>
           </div>
         </div>

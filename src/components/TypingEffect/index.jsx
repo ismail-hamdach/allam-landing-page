@@ -2,12 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
-export default function TypingEffect() {
-  const textArray = [
-    "Learn Arabic with AI-powered lessons.",
-    "Personalized learning for your child.",
-    "Master the language in a fun way!"
-  ];
+export default function TypingEffect({textArray}) {
+  
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
