@@ -15,6 +15,7 @@ const Pricing = async ({lang}) => {
           paragraph={t.start_section.desc}
           center
           width="765px"
+          colors={"text-primary"}
         />
 
         {/* <div className="w-full">

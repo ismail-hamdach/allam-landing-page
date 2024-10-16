@@ -34,6 +34,10 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
+      backgroundImage: {
+        'dark-gradient': 'linear-gradient(to top, #24243e, #171C28, #121723)',
+        'light-gradient': 'linear-gradient(to bottom, #FCFCFC,  #e3e3e3, #cad0ff)',
+      },
       colors: {
         current: "currentColor",
         transparent: "transparent",
