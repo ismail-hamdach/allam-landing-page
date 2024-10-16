@@ -9,8 +9,17 @@ function getLocale(request: NextRequest) {
 }
 
 export function middleware(request: NextRequest) {
-  // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
+  
+  // Skip paths that are static files (like images, CSS, etc.)
+  const isPublicFile = pathname.startsWith('/images') || pathname.startsWith('/favicon') || pathname.startsWith('/fonts') || pathname.startsWith('/dictionaries');
+  
+  if (isPublicFile) {
+    // Let the static file requests pass through without modifying the URL
+    return NextResponse.next();
+  }
+
+  // Check if there is any supported locale in the pathname
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
@@ -20,16 +29,12 @@ export function middleware(request: NextRequest) {
   // Redirect if there is no locale
   const locale = getLocale(request);
   request.nextUrl.pathname = `/${locale}${pathname}`;
-  // e.g. incoming request is /products
-  // The new URL is now /en-US/products
   return NextResponse.redirect(request.nextUrl);
 }
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next)
-    "/((?!_next).*)",
-    // Optional: only run on root (/) URL
-    // '/'
+    // Skip all internal paths (_next) and static assets (images, fonts, favicon)
+    "/((?!_next|images|favicon|fonts).*)",
   ],
 };
