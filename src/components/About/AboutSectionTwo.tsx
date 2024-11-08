@@ -39,7 +39,7 @@ const AboutSectionTwo = async ({ lang }) => {
             <div className="max-w-[470px]">
               {t.tutorial.instructions.map((instruction) =>
               (
-                <div className="mb-9">
+                <div className="mb-9" key={instruction.title}>
                   <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                     {instruction.title}
                   </h3>
