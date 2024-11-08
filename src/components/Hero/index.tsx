@@ -2,7 +2,7 @@ import Link from "next/link";
 import TypingEffect from '../TypingEffect';
 import { getDictionary } from '@/app/[lang]/dictionaries'
 
-const Hero = async ({lang}) => {
+const Hero = async ({ lang }) => {
 
   const t = await getDictionary(lang);
 
@@ -10,7 +10,7 @@ const Hero = async ({lang}) => {
     <>
       <section
         id="home"
-        className="h-screen relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px] bg-[url('https://img.freepik.com/premium-vector/cute-kids-learning-basic-shapes-math-lesson-cartoon-vector_1322560-6910.jpg')] bg-cover bg-center"
+        className="h-screen relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px] bg-[url('/images/hero/hero.jpg')] bg-cover bg-center"
       >
         <div className="absolute inset-0 bg-gray-400 dark:bg-black dark:bg-opacity-60 bg-opacity-30"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white dark:from-transparent dark:via-transparent dark:to-black dark:bg-opacity-60"></div>
@@ -28,7 +28,7 @@ const Hero = async ({lang}) => {
                 </p> */}
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 ">
                   <Link
-                    href="https://nextjstemplates.com/templates/saas-starter-startup"
+                    href={process.env.NEXT_BASE_URL || "https://app.allam.tech/auth/login"}
                     className="rounded-2xl hover:scale-110 bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
                     {t.hero.try_button}

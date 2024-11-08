@@ -1,11 +1,12 @@
+import Link from "next/link";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 
-const Pricing = async ({lang}) => {
+const Pricing = async ({ lang }) => {
   const t = await getDictionary(lang)
-  
+
 
   return (
     <section id="try-for-free" className="relative z-10 py-16 md:py-20 lg:py-28 h-screen bg-opacity-30 bg-center bg-cover bg-no-repeat bg-[url('/images/background/bg-focus.png')]">
@@ -101,9 +102,14 @@ const Pricing = async ({lang}) => {
         </div> */}
 
         <div className="w-full flex justify-center mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
-          <button className="flex  items-center justify-center rounded-2xl bg-primary py-5 px-6 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+          <Link
+            href={process.env.NEXT_BASE_URL || "https://app.allam.tech/auth/login"}
+
+            className="flex  items-center justify-center rounded-2xl bg-primary py-5 px-6 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
             {t.start_section.button}
-          </button>
+          </Link
+
+          >
         </div>
       </div>
 

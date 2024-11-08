@@ -56,18 +56,18 @@ const HeaderComponent = ({ t }) => {
                   } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
+                  src="/images/logo/logo.png"
                   alt="logo"
                   width={140}
                   height={30}
-                  className="w-full dark:hidden"
+                  className="dark:hidden w-auto h-[70px]"
                 />
                 <Image
-                  src="/images/logo/logo.svg"
+                  src="/images/logo/logo.png"
                   alt="logo"
                   width={140}
                   height={30}
-                  className="hidden w-full dark:block"
+                  className="hidden dark:block w-auto h-[70px]"
                 />
               </Link>
             </div>
@@ -154,7 +154,7 @@ const HeaderComponent = ({ t }) => {
               </div>
               <div className="scale-90 flex items-center justify-end pr-16 lg:pr-0">
                 <Link
-                  href="/signup"
+                  href={process.env.NEXT_BASE_URL || "https://app.allam.tech/auth/login"}
                   className="rounded-2xl ease-in-up shadow-btn hover:shadow-btn-hover hidden bg-transparent border-2 border-primary hover:bg-primary px-8 py-3 text-base font-medium dark:text-white text-primary hover:text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   {t.header.try_for_free}
